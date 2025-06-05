@@ -15074,17 +15074,23 @@
           "close-emergency-btn"
         );
 
-        emergencyBtn.addEventListener("click", () => {
-          emergencyModal.classList.remove("hidden");
-        });
+        if (emergencyBtn && emergencyModal) {
+          emergencyBtn.addEventListener("click", () => {
+            emergencyModal.classList.remove("hidden");
+          });
+        }
 
-        closeEmergencyModal.addEventListener("click", () => {
-          emergencyModal.classList.add("hidden");
-        });
+        if (closeEmergencyModal && emergencyModal) {
+          closeEmergencyModal.addEventListener("click", () => {
+            emergencyModal.classList.add("hidden");
+          });
+        }
 
-        closeEmergencyBtn.addEventListener("click", () => {
-          emergencyModal.classList.add("hidden");
-        });
+        if (closeEmergencyBtn && emergencyModal) {
+          closeEmergencyBtn.addEventListener("click", () => {
+            emergencyModal.classList.add("hidden");
+          });
+        }
 
         // Login modal
         const loginBtn = document.getElementById("login-btn");
